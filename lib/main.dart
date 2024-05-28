@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:pick_a_card/list.dart';
 
 const double kCardHeight = 225;
 const double kCardWidth = 389;
@@ -29,9 +30,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner:false,
-      home: MainPage(
+      home:
+StackedList()
+
+   /*   
+       MainPage(
         cardsData: [
           CreditCardData(
             backgroundColor: Colors.orange, holderName: 'Mustafa Hisham Salama', cardNumber: '374245455400126', expDate: '05/2029',bankName: "BOK"
@@ -50,6 +55,10 @@ class MyApp extends StatelessWidget {
           ),
         ],
       ),
+    
+    */
+    
+    
     );
   }
 }
@@ -187,6 +196,10 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ),
+              
+              
+              
+              
               if(selectedCardIndex!=null)
                 Positioned.fill(
                   child: Padding(
