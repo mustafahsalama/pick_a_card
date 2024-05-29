@@ -56,7 +56,15 @@ int?  selectedIndex;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Stacked Listview"),
+        backgroundColor:  Colors.blueAccent,
+        title: 
+         const Text("Stacked Listview", 
+         
+         style: TextStyle(
+          color: Colors.white
+         ),
+         
+         ),
       ),
       body:NotificationListener<ScrollNotification>( 
           onNotification: (ScrollNotification notification) {
@@ -108,7 +116,12 @@ animation: _animation!,
                     ),
                     tileColor:cardData[index].$2 as Color,
 
-                    title: Text(cardData[index].$1),
+                    title: Text(cardData[index].$1, 
+                    
+                    style: const TextStyle(
+                      color: Colors.white
+                    ),
+                    ),
                         ),
                         
                       
